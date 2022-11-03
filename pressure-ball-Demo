@@ -310,7 +310,7 @@
         <br>
         <button id='adc' type="button" class="btn btn-lg btn-block">ADC</button>
         <br>
-        <input  id="input" type="text" class="form-control" value=0810 placeholder="Enter 0~9999" readonly=true>
+        <input  id="input" type="text" class="form-control" value=0810 placeholder="Enter 40~99" readonly=true>
         <br>
         <button id='show' type="button" class="btn btn-lg btn-block">Show</button>
         <br>
