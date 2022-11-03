@@ -62,9 +62,9 @@
           return characteristic.readValue();
         })
         .then(value => {
-          let v1=value.getUint8(0);
-          let v2=value.getUint8(1);
-          let va=v1+v2*0x100;
+          let v1=value.getUint16(0);
+          let v2=value.getUint16(1);
+          let va=v1+v2*0x10000;
           $('input').attr('value', va);
           log('Reading Characteristic values... Value is ' + va);
           connected = true;
@@ -299,20 +299,20 @@
       <h2>
         
         <br>
-        Web BLE demo
+        壓力球 Demo
       </h2>
     </div>
     <div class="row">
       <div class="col-sm-3">
-        <button id='connect' type="button" class="btn btn-lg btn-block">Connect</button>
+        <button id='connect' type="button" class="btn btn-lg btn-block">連線</button>
         <br>
         <button id='notify' type="button" class="btn btn-lg btn-block">Not Recieving</button>
         <br>
-        <button id='adc' type="button" class="btn btn-lg btn-block">ADC</button>
+        <button id='adc' type="button" class="btn btn-lg btn-block">計數</button>
         <br>
         <input  id="input" type="text" class="form-control" value=0810 placeholder="Enter 40~99" readonly=true>
         <br>
-        <button id='show' type="button" class="btn btn-lg btn-block">Show</button>
+        <button id='show' type="button" class="btn btn-lg btn-block">設定閥值</button>
         <br>
         <button id='toggle' type="button" class="btn btn-lg btn-block">Value</button>
         <br>
